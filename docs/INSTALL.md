@@ -10,6 +10,7 @@ Ensure you have the following installed:
 ## Steps
 
 1. Clone the repository:
+
    Start by cloning the repository to your local machine:
 
    ```bash
@@ -18,6 +19,7 @@ Ensure you have the following installed:
    ```
 
 2. Install dependencies:
+
    To set up environment variables, create a .env file in the root of the project. You can copy the example configuration provided:
 
    ```bash
@@ -25,6 +27,7 @@ Ensure you have the following installed:
    ```
 
 3. Set up environment variables:
+
    To set up environment variables, create a .env file in the root of the project. You can copy the example configuration provided:
 
    ```bash
@@ -34,6 +37,7 @@ Ensure you have the following installed:
    After copying, edit the .env file to match your local or production environment configuration. Be sure to provide the correct API URLs and other necessary environment-specific settings.
 
 4. Run the development server:
+
    To start the application in development mode, run:
 
    ```bash
@@ -43,6 +47,7 @@ Ensure you have the following installed:
    This will start the application in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 5. Run the application in production:
+
    To build the application for production, run:
 
    ```bash
@@ -52,6 +57,7 @@ Ensure you have the following installed:
    This will create a build/ directory with all the static files optimized for production.
 
 6. Serve the production build:
+
    To serve the production build locally, you can use a simple HTTP server like serve. First, install it globally:
 
    ```bash
@@ -76,6 +82,7 @@ Ensure you have the following installed:
       In this case, the application will be available at [http://localhost:3000](http://localhost:3000).
 
 7. Change Development or Production Port (Optional)
+
    If you want to change the default port for the development server or the production build, you can set the PORT variable in the .env file. For example:
 
    ```bash
