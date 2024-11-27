@@ -5,7 +5,7 @@
  * @param {string} defaultMessage - The default error message to use if the error is not an instance of `Error`.
  * @returns {string} The error message to display.
  */
-export const handleError = (err: unknown, defaultMessage: string): string => {
+export const handleError = (err: unknown, defaultMessage: string = 'An unknown error occurred.'): string => {
   console.error(err);
 
   if (err instanceof Error) {

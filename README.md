@@ -14,6 +14,7 @@ A front-end example using React for managing a CRUD application that connects to
 
 - Node.js >= 16
 - npm >= 8
+- The backend server is required and should be running. You can find it here: [TaxDown Senior Backend Challenge](https://github.com/cubiczx/TaxDown-senior-backend-challenge)
 
 ## Installation
 

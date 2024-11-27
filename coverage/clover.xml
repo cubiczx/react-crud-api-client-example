@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732703168046" clover="3.2.0">
-  <project timestamp="1732703168046" name="All files">
-    <metrics statements="185" coveredstatements="30" conditionals="56" coveredconditionals="9" methods="59" coveredmethods="6" elements="300" coveredelements="45" complexity="0" loc="185" ncloc="185" packages="5" files="7" classes="7"/>
+<coverage generated="1732704292336" clover="3.2.0">
+  <project timestamp="1732704292337" name="All files">
+    <metrics statements="185" coveredstatements="5" conditionals="57" coveredconditionals="4" methods="59" coveredmethods="1" elements="301" coveredelements="10" complexity="0" loc="185" ncloc="185" packages="5" files="7" classes="7"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="main.tsx" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\main.tsx">
@@ -37,39 +37,39 @@
       </file>
     </package>
     <package name="src.infrastructure.api">
-      <metrics statements="40" coveredstatements="30" conditionals="10" coveredconditionals="9" methods="14" coveredmethods="6"/>
+      <metrics statements="40" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="14" coveredmethods="0"/>
       <file name="ApiClient.ts" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\infrastructure\api\ApiClient.ts">
-        <metrics statements="30" coveredstatements="30" conditionals="9" coveredconditionals="9" methods="6" coveredmethods="6"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="13" count="8" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="56" count="2" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="70" count="2" type="stmt"/>
-        <line num="71" count="2" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
-        <line num="85" count="10" type="cond" truecount="1" falsecount="0"/>
-        <line num="86" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="87" count="2" type="stmt"/>
-        <line num="93" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="94" count="1" type="stmt"/>
-        <line num="96" count="1" type="stmt"/>
-        <line num="98" count="6" type="stmt"/>
+        <metrics statements="30" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="85" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="86" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="93" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
       </file>
       <file name="CustomerApiClient.ts" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\infrastructure\api\CustomerApiClient.ts">
         <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="0"/>
@@ -213,14 +213,14 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="5" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="ErrorUtils.ts" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\utils\ErrorUtils.ts">
-        <metrics statements="5" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
       </file>
     </package>
   </project>
