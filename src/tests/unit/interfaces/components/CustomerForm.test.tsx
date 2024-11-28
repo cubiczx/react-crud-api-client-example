@@ -2,39 +2,18 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { CustomerForm } from '../../../../interfaces/components/CustomerForm';
 import * as CustomerUseCases from '../../../../application/useCases/CustomerUseCases';
-import { ApiClient } from '../../../../infrastructure/api/ApiClient';
 import axios from 'axios';
 import { CustomerApiClient } from '../../../../infrastructure/api/CustomerApiClient';
 import { Customer } from '../../../../domain/models/Customer';
-
-// Mock de axios
-/*jest.mock('axios', () => ({
-  post: jest.fn().mockResolvedValue({
-    data: { id: '1', name: 'John Doe', email: 'john@example.com' },
-  }),
-  put: jest.fn().mockResolvedValue({
-    data: { id: '1', name: 'John Doe', email: 'john@example.com' },
-  }),
-  get: jest.fn().mockResolvedValue({
-    data: { id: '1', name: 'John Doe', email: 'john@example.com' },
-  }),
-  // Puedes mockear otros métodos si los necesitas
-  create: jest.fn().mockResolvedValue({
-    data: { id: '1', name: 'John Doe', email: 'john@example.com' },
-  }), // Mock de create
-}));*/
 
 jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('CustomerForm', () => {
   beforeEach(() => {
-    // Clear mocks before each test
-    //mockedAxios.create.mockClear();
     mockedAxios.get.mockClear();
     mockedAxios.post.mockClear();
     mockedAxios.put.mockClear();
-    //mockedAxios.delete.mockClear();
     mockedAxios.isAxiosError.mockClear();
   });
 
@@ -137,17 +116,31 @@ describe('CustomerForm', () => {
   });
 
   it('should call onSubmit with updated customer data when the form is submitted', async () => {
-    const mockData = { id: '1', name: 'John Doe', email: 'john@example.com', availableCredit: 1  };
-    const updatedData = { id: '1', name: 'Jane Doe', email: 'jane@example.com', availableCredit: 1  };
+    const mockData = {
+      id: '1',
+      name: 'John Doe',
+      email: 'john@example.com',
+      availableCredit: 1,
+    };
+    const updatedData = {
+      id: '1',
+      name: 'Jane Doe',
+      email: 'jane@example.com',
+      availableCredit: 1,
+    };
     const mockSubmit = jest.fn();
-  
+
     // Simular la respuesta de axios.get
     mockedAxios.get.mockResolvedValueOnce({ data: mockData });
     const newCustomer: Customer = mockData;
-    jest.spyOn(CustomerApiClient, "getCustomerById").mockResolvedValueOnce(newCustomer);
+    jest
+      .spyOn(CustomerApiClient, 'getCustomerById')
+      .mockResolvedValueOnce(newCustomer);
     const updatedCustomer: Customer = updatedData;
-    jest.spyOn(CustomerApiClient, "updateCustomer").mockResolvedValueOnce(updatedCustomer);
-  
+    jest
+      .spyOn(CustomerApiClient, 'updateCustomer')
+      .mockResolvedValueOnce(updatedCustomer);
+
     render(
       <MemoryRouter initialEntries={['/customers/1']}>
         <Routes>
@@ -158,13 +151,13 @@ describe('CustomerForm', () => {
         </Routes>
       </MemoryRouter>
     );
-  
+
     // Esperar a que se carguen los datos
     await waitFor(() => {
       expect(screen.getByLabelText(/Name/i)).toHaveValue(mockData.name);
       expect(screen.getByLabelText(/Email/i)).toHaveValue(mockData.email);
     });
-  
+
     // Actualizar los valores en el formulario
     fireEvent.change(screen.getByLabelText(/Name/i), {
       target: { value: updatedData.name },
@@ -172,18 +165,17 @@ describe('CustomerForm', () => {
     fireEvent.change(screen.getByLabelText(/Email/i), {
       target: { value: updatedData.email },
     });
-  
+
     // Enviar el formulario
     fireEvent.click(screen.getByRole('button', { name: /Update Customer/i }));
-  
+
     // Verificar que se llamó a onSubmit con los valores actualizados
     await waitFor(() => {
       expect(mockSubmit).toHaveBeenCalledWith(updatedData);
     });
   });
-  
 
-  test('should load existing customer data when editing', async () => {
+  it('should load existing customer data when editing', async () => {
     // Simula un cliente existente
     const mockCustomer = {
       id: '1',
