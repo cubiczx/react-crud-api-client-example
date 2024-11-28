@@ -92,9 +92,9 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
       } else {
         await createCustomer(newCustomer);
       }
-      // Invoca la prop `onSubmit` para las pruebas
+      // Invokes the `onSubmit` prop for tests
       onSubmit?.(newCustomer);
-      
+
       navigate("/"); // Redirects to list
     } catch (err: any) {
       setError(handleError(err, "An error occurred while submitting the form."));
@@ -132,12 +132,14 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
 
       <form onSubmit={handleSubmit}>
         <InputField
+          id="name"
           label="Name *"
           value={name}
           onChange={handleInputChange(setName)}
           required
         />
         <InputField
+          id="email"
           label="Email * "
           type="email"
           value={email}
@@ -145,6 +147,7 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
           required
         />
         <InputField
+          id="availableCredit"
           label="Available Credit *"
           type="number"
           value={availableCredit}
@@ -165,17 +168,19 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
  * A reusable input field component for the form.
  */
 const InputField: React.FC<{
+  id: string;
   label: string;
   value: string | number;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   type?: string;
   min?: number;
   required?: boolean;
-}> = ({ label, value, onChange, type = "text", min, required }) => {
+}> = ({ id, label, value, onChange, type = "text", min, required }) => {
   return (
     <div style={{ marginBottom: "10px" }}>
-      <label>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <input
+        id={id}
         type={type}
         value={value}
         onChange={onChange}
