@@ -20,6 +20,10 @@ A front-end example using React for managing a CRUD application that connects to
 
 Follow the steps in [docs/INSTALL.md](./docs/INSTALL.md) for setup instructions.
 
+## Coverage Report
+
+For a detailed coverage report, run all test with `npm run dev` and open `coverage/lcov-report/index.html`.
+
 ## Recommended Development Tool
 
 To enhance your development experience, consider installing the React DevTools extension for your browser: [Download React DevTools](https://reactjs.org/link/react-devtools)
