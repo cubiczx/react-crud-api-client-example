@@ -28,7 +28,7 @@ describe('CustomerForm', () => {
       </MemoryRouter>
     );
 
-    // Verificar que los elementos del formulario están presentes
+    // Check that the form elements are present
     expect(screen.getByLabelText(/Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Email/i)).toBeInTheDocument();
     expect(
@@ -39,7 +39,7 @@ describe('CustomerForm', () => {
   it('should render the form correctly for updating a customer', async () => {
     const mockData = { id: '1', name: 'John Doe', email: 'john@example.com' };
 
-    // Simular la respuesta de axios.get para el endpoint esperado
+    // Simulate the axios.get response for the expected endpoint
     mockedAxios.get.mockResolvedValueOnce({ data: mockData });
     const newCustomer: Customer = {
       id: '1',
@@ -62,13 +62,13 @@ describe('CustomerForm', () => {
       </MemoryRouter>
     );
 
-    // Esperar a que los datos del cliente sean cargados y renderizados
+    // Wait for the customer data to be loaded and rendered
     await waitFor(() => {
       expect(screen.getByLabelText(/Name/i)).toHaveValue(mockData.name);
       expect(screen.getByLabelText(/Email/i)).toHaveValue(mockData.email);
     });
 
-    // Verificar que el botón de actualización está presente
+    // Check that the update button is present
     expect(
       screen.getByRole('button', { name: /Update Customer/i })
     ).toBeInTheDocument();
@@ -82,7 +82,7 @@ describe('CustomerForm', () => {
       email: 'john.doe@example.com',
       availableCredit: 1000,
     };
-    // Simula createCustomer
+    // Simulate createCustomer
     jest
       .spyOn(CustomerUseCases, 'createCustomer')
       .mockResolvedValue(mockCustomer);
@@ -93,7 +93,7 @@ describe('CustomerForm', () => {
       </MemoryRouter>
     );
 
-    // Cambiar los valores de los campos
+    // Change the values of the fields
     fireEvent.change(screen.getByLabelText(/Name/i), {
       target: { value: 'John Doe' },
     });
@@ -101,16 +101,16 @@ describe('CustomerForm', () => {
       target: { value: 'john@example.com' },
     });
 
-    // Hacer clic en el botón de submit
+    // Click the submit button
     fireEvent.click(screen.getByRole('button', { name: /Create Customer/i }));
 
-    // Esperar que se llame a onSubmit
+    // Wait for onSubmit to be called
     await waitFor(() =>
       expect(mockOnSubmit).toHaveBeenCalledWith({
-        id: '', // Si no hay ID, debe ser vacío
+        id: '', // If no ID, it should be empty
         name: 'John Doe',
         email: 'john@example.com',
-        availableCredit: 0, // Valor predeterminado de availableCredit
+        availableCredit: 0, // Default value of availableCredit
       })
     );
   });
@@ -130,7 +130,7 @@ describe('CustomerForm', () => {
     };
     const mockSubmit = jest.fn();
 
-    // Simular la respuesta de axios.get
+    // Simulate the axios.get response
     mockedAxios.get.mockResolvedValueOnce({ data: mockData });
     const newCustomer: Customer = mockData;
     jest
@@ -152,13 +152,13 @@ describe('CustomerForm', () => {
       </MemoryRouter>
     );
 
-    // Esperar a que se carguen los datos
+    // Wait for the data to load
     await waitFor(() => {
       expect(screen.getByLabelText(/Name/i)).toHaveValue(mockData.name);
       expect(screen.getByLabelText(/Email/i)).toHaveValue(mockData.email);
     });
 
-    // Actualizar los valores en el formulario
+    // Update the values in the form
     fireEvent.change(screen.getByLabelText(/Name/i), {
       target: { value: updatedData.name },
     });
@@ -166,17 +166,17 @@ describe('CustomerForm', () => {
       target: { value: updatedData.email },
     });
 
-    // Enviar el formulario
+    // Submit the form
     fireEvent.click(screen.getByRole('button', { name: /Update Customer/i }));
 
-    // Verificar que se llamó a onSubmit con los valores actualizados
+    // Check that onSubmit was called with the updated values
     await waitFor(() => {
       expect(mockSubmit).toHaveBeenCalledWith(updatedData);
     });
   });
 
   it('should load existing customer data when editing', async () => {
-    // Simula un cliente existente
+    // Simulate an existing customer
     const mockCustomer = {
       id: '1',
       name: 'John Doe',
@@ -184,7 +184,7 @@ describe('CustomerForm', () => {
       availableCredit: 1000,
     };
 
-    // Simula fetchCustomerById
+    // Simulate fetchCustomerById
     jest
       .spyOn(CustomerUseCases, 'fetchCustomerById')
       .mockResolvedValue(mockCustomer);
@@ -197,7 +197,7 @@ describe('CustomerForm', () => {
       </MemoryRouter>
     );
 
-    // Espera a que los datos del cliente se carguen
+    // Wait for the customer data to load
     await waitFor(() => {
       expect(screen.getByLabelText(/Name/i)).toHaveValue(mockCustomer.name);
       expect(screen.getByLabelText(/Email/i)).toHaveValue(mockCustomer.email);
