@@ -28,6 +28,7 @@ describe('CustomerForm', () => {
 
   afterEach(() => {
     jest.restoreAllMocks();
+    jest.clearAllMocks();
   });
 
   it('should render the form correctly for creating a customer', () => {
