@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732812492921" clover="3.2.0">
-  <project timestamp="1732812492921" name="All files">
-    <metrics statements="185" coveredstatements="45" conditionals="57" coveredconditionals="6" methods="59" coveredmethods="6" elements="301" coveredelements="57" complexity="0" loc="185" ncloc="185" packages="5" files="7" classes="7"/>
+<coverage generated="1732890105197" clover="3.2.0">
+  <project timestamp="1732890105198" name="All files">
+    <metrics statements="188" coveredstatements="72" conditionals="57" coveredconditionals="25" methods="59" coveredmethods="15" elements="304" coveredelements="112" complexity="0" loc="188" ncloc="188" packages="5" files="7" classes="7"/>
     <package name="src">
       <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="main.tsx" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\main.tsx">
@@ -15,18 +15,18 @@
       </file>
     </package>
     <package name="src.application.useCases">
-      <metrics statements="16" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <metrics statements="16" coveredstatements="10" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="2"/>
       <file name="CustomerUseCases.ts" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\application\useCases\CustomerUseCases.ts">
-        <metrics statements="16" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="10" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
         <line num="30" count="1" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
         <line num="61" count="1" type="stmt"/>
@@ -86,59 +86,62 @@
       </file>
     </package>
     <package name="src.interfaces.components">
-      <metrics statements="118" coveredstatements="31" conditionals="42" coveredconditionals="6" methods="35" coveredmethods="6"/>
+      <metrics statements="121" coveredstatements="53" conditionals="42" coveredconditionals="22" methods="35" coveredmethods="12"/>
       <file name="CustomerForm.tsx" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\interfaces\components\CustomerForm.tsx">
-        <metrics statements="50" coveredstatements="31" conditionals="23" coveredconditionals="6" methods="12" coveredmethods="6"/>
+        <metrics statements="53" coveredstatements="53" conditionals="23" coveredconditionals="22" methods="12" coveredmethods="12"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="60" count="2" type="stmt"/>
-        <line num="61" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="75" count="2" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="78" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
-        <line num="96" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="98" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
-        <line num="117" count="2" type="stmt"/>
-        <line num="120" count="3" type="stmt"/>
-        <line num="123" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="124" count="1" type="stmt"/>
-        <line num="127" count="1" type="stmt"/>
-        <line num="154" count="0" type="stmt"/>
-        <line num="162" count="0" type="stmt"/>
-        <line num="178" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="179" count="3" type="stmt"/>
+        <line num="23" count="54" type="stmt"/>
+        <line num="24" count="54" type="stmt"/>
+        <line num="26" count="54" type="stmt"/>
+        <line num="27" count="54" type="stmt"/>
+        <line num="28" count="54" type="stmt"/>
+        <line num="29" count="54" type="stmt"/>
+        <line num="30" count="54" type="stmt"/>
+        <line num="32" count="54" type="stmt"/>
+        <line num="40" count="13" type="stmt"/>
+        <line num="41" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="5" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="51" count="5" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
+        <line num="58" count="13" type="stmt"/>
+        <line num="61" count="54" type="stmt"/>
+        <line num="62" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="68" count="4" type="stmt"/>
+        <line num="78" count="54" type="stmt"/>
+        <line num="79" count="7" type="stmt"/>
+        <line num="81" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="82" count="3" type="stmt"/>
+        <line num="85" count="4" type="stmt"/>
+        <line num="92" count="4" type="stmt"/>
+        <line num="93" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="96" count="3" type="stmt"/>
+        <line num="99" count="2" type="cond" truecount="3" falsecount="1"/>
+        <line num="101" count="2" type="stmt"/>
+        <line num="103" count="4" type="stmt"/>
+        <line num="120" count="54" type="stmt"/>
+        <line num="123" count="123" type="stmt"/>
+        <line num="126" count="54" type="cond" truecount="1" falsecount="0"/>
+        <line num="127" count="13" type="stmt"/>
+        <line num="130" count="41" type="stmt"/>
+        <line num="157" count="5" type="stmt"/>
+        <line num="165" count="1" type="stmt"/>
+        <line num="181" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="182" count="123" type="stmt"/>
       </file>
       <file name="CustomerList.tsx" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\interfaces\components\CustomerList.tsx">
         <metrics statements="68" coveredstatements="0" conditionals="19" coveredconditionals="0" methods="23" coveredmethods="0"/>
@@ -213,13 +216,13 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
       <file name="ErrorUtils.ts" path="C:\Users\Xavier\Projects\react-crud-api-client-example\src\utils\ErrorUtils.ts">
-        <metrics statements="5" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="8" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="11" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="15" count="0" type="stmt"/>
       </file>
     </package>

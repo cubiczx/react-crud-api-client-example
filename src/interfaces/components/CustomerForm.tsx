@@ -46,6 +46,7 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
           setAvailableCredit(customer.availableCredit);
         } catch (err: any) {
           setError(handleError(err, "Failed to load customer data."));
+          setLoading(false);
         } finally {
           setLoading(false);
         }
@@ -59,9 +60,11 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
 
   const validateForm = useCallback(() => {
     if (!name || !email || availableCredit < 0) {
-      setError("Please fill out all fields with valid data.");
+      const err = new Error("Please fill out all fields with valid data.");
+      setError(handleError(err, "Please fill out all fields with valid data."));
       return false;
     }
+    setError("");
     return true;
   }, [name, email, availableCredit]);
 
@@ -140,7 +143,7 @@ export const CustomerForm: React.FC<CustomerFormProps> = ({ onSubmit }) => {
         />
         <InputField
           id="email"
-          label="Email * "
+          label="Email *"
           type="email"
           value={email}
           onChange={handleInputChange(setEmail)}
